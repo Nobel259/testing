@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact - Planet Tata Surya</title>
+  <meta charset="UTF-8">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+    nav {
+      background: rgba(20, 24, 40, 0.95);
+      padding: 1rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      text-decoration: none;
+      color: #f0f5ff;
+      font-weight: 500;
+      padding: 0.3rem 1rem;
+      border-radius: 3px;
+    }
+    nav a.active, nav a:hover {
+      background: #2341a8;
+    }
+    .form-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .contact-container {
+      background-color: rgba(24, 28, 47, 0.5);
+      border-radius: 16px;
+      box-shadow: 0 2px 16px #0008;
+      padding: 38px 32px 36px 32px;
+      width: 350px;
+      max-width: 90vw;
+    }
+    .contact-container h2 {
+      text-align: center;
+      margin-bottom: 22px;
+      letter-spacing: 1px;
+      font-size: 26px;
+    }
+    label {
+      display: block;
+      margin: 12px 0 5px 0;
+      font-size: 16px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 8px;
+      border-radius: 7px;
+      border: 1px solid #344172;
+      font-size: 15px;
+      background: #242a45;
+      color: #fff;
+    }
+    textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+    .msg-box {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 15px;
+      color: #ff465a;
+      background: #ffedf1;
+      border-radius: 6px;
+      padding: 7px 12px;
+      display: none;
+    }
+    .msg-box.success {
+      color: #25ff56;
+      background: #ecffed;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 7px;
+      border: none;
+      background: #355cf6;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: background 0.18s;
+    }
+    button:hover {
+      background: #1c3bad;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="planets.html">Planet</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+  <div class="form-wrapper">
+    <div class="contact-container">
+      <h2>Hubungi Kami</h2>
+      <form id="contactForm" autocomplete="off">
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" name="nama">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+
+        <label for="pesan">Pesan</label>
+        <textarea id="pesan" name="pesan"></textarea>
+
+        <div class="msg-box" id="messages"></div>
+        <button type="submit">Kirim</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      var nama = document.getElementById("nama").value.trim();
+      var email = document.getElementById("email").value.trim();
+      var pesan = document.getElementById("pesan").value.trim();
+      var msgBox = document.getElementById("messages");
+
+      if (!nama || !email || !pesan) {
+        msgBox.textContent = "wajib mengisi semua!";
+        msgBox.style.display = "block";
+        msgBox.classList.remove("success");
+      } else {
+        msgBox.textContent = "berhasil dikirim!";
+        msgBox.style.display = "block";
+        msgBox.classList.add("success");
+        setTimeout(function() {
+          document.getElementById("contactForm").reset();
+          msgBox.style.display = "none";
+          msgBox.classList.remove("success");
+        }, 1800);
+      }
+    });
+  </script>
+</body>
+</html>

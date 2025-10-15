@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Planet Tata Surya</title>
+  <style>
+    body {
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background: rgba(20, 24, 40, 0.95);
+      padding: 1rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #f0f5ff;
+      font-weight: 500;
+      padding: 0.3rem 1rem;
+      border-radius: 3px;
+    }
+    nav a.active, nav a:hover {
+      background: #2341a8;
+    }
+    .planet-section {
+      padding: 40px 0 60px 0;
+      border-bottom: 2px solid #222;
+      width: 100%;
+    }
+    .planet-header {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .planet-image {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #23253a;
+      box-shadow: 0 2px 12px #0005;
+    }
+    .planet-info {
+      flex: 1;
+    }
+    .planet-name {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+    .planet-tag {
+      font-size: 18px;
+      color: #ffac3b;
+    }
+    .key-char, .explor {
+      font-size: 16px;
+      margin-top: 12px;
+    }
+    .gallery-title, .discoveries-title {
+      font-size: 22px;
+      margin: 32px 0 18px 0;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 160px);
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .gallery img {
+      width: 160px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 7px;
+      box-shadow: 0 1px 6px #1116;
+    }
+    .discoveries {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .discovery {
+      background: #242a45;
+      padding: 14px;
+      border-radius: 7px;
+      margin-right: 14px;
+      color: #b8d2ff;
+      box-shadow: 0 2px 6px #0003;
+      font-size: 15px;
+    }
+    .discovery .title {
+      font-weight: bold;
+      color: #67aaff;
+      font-size: 17px;
+    }
+    .readmore {
+      background: #2136a0;
+      color: #fff;
+      padding: 5px 18px;
+      border-radius: 3px;
+      text-decoration: none;
+      font-size: 13px;
+      margin-left: 8px;
+    }
+    @media (max-width: 600px) {
+      .planet-header { flex-direction: column; align-items: flex-start; }
+      .gallery { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="planets.html" class="active">Planet</a> 
+    <a href="contact.html">Contact</a>
+  </nav>
+  <!-- Merkurius -->
+  <div class="planet-section">
+    <div class="planet-header">
+      <img src="Mer.png" class="planet-image" alt="Merkurius">
+      <div class="planet-info">
+        <div class="planet-name">MERKURIUS</div>
+        <div class="planet-tag">Planet Terdekat Matahari</div>
+        <div class="key-char">Temperatur rata-rata: 167°C<br>Radius: 2.440 km<br>Tidak memiliki bulan</div>
+        <div class="explor">Highlight: Misi Messenger, Studi permukaan dan komposisi</div>
+      </div>
+    </div>
+    <div class="gallery-title">GALERI</div>
+    <div class="gallery">
+      <img src="Mer.png" alt="Merkurius1">
+      <img src="Mer.png" alt="Merkurius2">
+      <img src="Mer.png" alt="Merkurius3">
+      <img src="Mer.png" alt="Merkurius4">
+    </div>
+    <div class="discoveries-title">PENEMUAN TERKINI</div>
+    <div class="discoveries">
+      <div class="discovery">
+        <span class="title">Temuan Unsur Volatile</span> Penelitian oleh Messenger mengidentifikasi natrium dan potasium di eksosfer Merkurius.
+        <a href="#" class="readmore">Selengkapnya</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Venus -->
+  <div class="planet-section">
+    <div class="planet-header">
+      <img src="venus.png" class="planet-image" alt="Venus">
+      <div class="planet-info">
+        <div class="planet-name">VENUS</div>
+        <div class="planet-tag">Planet Terekstrem</div>
+        <div class="key-char">Temperatur rata-rata: 464°C<br>Radius: 6.052 km<br>Tidak memiliki bulan</div>
+        <div class="explor">Highlight: Atmospheric studies, Misi Akatsuki & Venus Express</div>
+      </div>
+    </div>
+    <div class="gallery-title">GALERI</div>
+    <div class="gallery">
+      <img src="venus.png" alt="Venus1">
+      <img src="venus.png" alt="Venus2">
+      <img src="venus.png" alt="Venus3">
+      <img src="venus.png" alt="Venus4">
+    </div>
+    <div class="discoveries-title">PENEMUAN TERKINI</div>
+    <div class="discoveries">
+      <div class="discovery">
+        <span class="title">Kandungan Fosfin di Atmosfer</span> Mungkin indikasi proses biologis atau kimia kompleks di atmosfer Venus.
+        <a href="#" class="readmore">Selengkapnya</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bumi -->
+  <div class="planet-section">
+    <div class="planet-header">
+      <img src="bumi.png" class="planet-image" alt="Bumi">
+      <div class="planet-info">
+        <div class="planet-name">BUMI</div>
+        <div class="planet-tag">Planet Kehidupan</div>
+        <div class="key-char">Temperatur rata-rata: 15°C<br>Radius: 6.371 km<br>1 bulan (Bulan)</div>
+        <div class="explor">Highlight: Astronaut, Studi ekosistem global, Observasi satelit</div>
+      </div>
+    </div>
+    <div class="gallery-title">GALERI</div>
+    <div class="gallery">
+      <img src="bumi.png" alt="Bumi1">
+      <img src="bumi.png" alt="Bumi2">
+      <img src="bumi.png" alt="Bumi3">
+      <img src="bumi.png" alt="Bumi4">
+    </div>
+    <div class="discoveries-title">PENEMUAN TERKINI</div>
+    <div class="discoveries">
+      <div class="discovery">
+        <span class="title">Peningkatan Suhu Global</span> Laporan IPCC terbaru tentang perubahan iklim dan dampaknya.
+        <a href="#" class="readmore">Selengkapnya</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mars -->
+  <div class="planet-section">
+    <div class="planet-header">
+      <img src="mars.png" class="planet-image" alt="Mars">
+      <div class="planet-info">
+        <div class="planet-name">MARS</div>
+        <div class="planet-tag">Planet Merah: Berpotensi Dihuni</div>
+        <div class="key-char">Temperatur rata-rata: -63°C<br>Radius: 3.389,5 km<br>2 bulan (Phobos & Deimos)</div>
+        <div class="explor">Highlight: Misi manusia di masa depan</div>
+      </div>
+    </div>
+    <div class="gallery-title">GALERI</div>
+    <div class="gallery">
+      <img src="mars.png" alt="Mars1">
+      <img src="mars.png" alt="Mars2">
+      <img src="mars.png" alt="Mars3">
+      <img src="mars.png" alt="Mars4">
+    </div>
+    <div class="discoveries-title">PENEMUAN TERKINI</div>
+    <div class="discoveries">
+      <div class="discovery">
+        <span class="title">Bukti Danau Purba Ditemukan</span> Rover Mars dan misi orbit menemukan jejak danau purba, dan eksperimen produksi oksigen.
+        <a href="#" class="readmore">Selengkapnya</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
